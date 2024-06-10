@@ -87,13 +87,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Body = "Nom: $name\nPrénom: $lastname\nGenre: $gender\nEmail: $email\nPays: $country\n\nMessage:\n$message";
 
         $mail->send();
-        $_SESSION['success'] = 'Message envoyé avec succès.';
+        echo 'E-mail successfully sent.';
     } catch (Exception $e) {
         $_SESSION['error'] = "Échec de l'envoi du message. Mailer Error: {$mail->ErrorInfo}";
         header('Location: index.php');
     }
-
-    echo 'E-mail successfully sent.';
 
     exit;
 }
