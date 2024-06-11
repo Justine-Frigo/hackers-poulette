@@ -44,7 +44,7 @@ body .wrapper .inner .form-group {
   display: block;
   margin-bottom: 34px;
 }
-body .wrapper .inner .form-group::-moz-placeholder {
+body .wrapper .inner .form-group ::-moz-placeholder {
   font-size: 15px;
   color: #00ade6;
   position: absolute;
@@ -55,7 +55,7 @@ body .wrapper .inner .form-group::-moz-placeholder {
   cursor: text;
   font-family: "Montserrat", sans-serif;
 }
-body .wrapper .inner .form-group::placeholder {
+body .wrapper .inner .form-group ::placeholder {
   font-size: 15px;
   color: #00ade6;
   position: absolute;
@@ -64,6 +64,9 @@ body .wrapper .inner .form-group::placeholder {
   transform-origin: 0 0;
   cursor: text;
   font-family: "Montserrat", sans-serif;
+}
+body .wrapper .inner .form-group .error {
+  color: rgb(235, 85, 85);
 }
 body .wrapper .inner .form-group input,
 body .wrapper .inner .form-group textarea {
@@ -136,8 +139,4 @@ body .wrapper .inner button:hover::before {
 body .wrapper .inner button:hover {
   color: #000;
   border: none;
-}
-
-.error {
-  color: rgb(235, 85, 85);
 }/*# sourceMappingURL=style.css.map */

@@ -30,27 +30,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $errors = [];
 
     if (!$name) {
-        $errors['name'] = "Nom requis";
+        $errors['name'] = "Firstname required";
     }
 
     if (!$lastname) {
-        $errors['lastname'] = "Prénom requis";
+        $errors['lastname'] = "Lastname required";
     }
 
     if (!$gender || !in_array($gender, ['male', 'female', 'other'])) {
-        $errors['gender'] = "Genre invalide";
+        $errors['gender'] = "Invalid gender";
     }
 
     if (!$email) {
-        $errors['email'] = "Email invalide";
+        $errors['email'] = "Invalid email";
     }
 
     if (!$country) {
-        $errors['country'] = "Pays requis";
+        $errors['country'] = "Invalid country";
     }
 
     if (!$message) {
-        $errors['message'] = "Message requis";
+        $errors['message'] = "Message required";
     }
 
     if (!empty($errors)) {
@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->send();
         echo 'E-mail successfully sent.';
     } catch (Exception $e) {
-        $_SESSION['error'] = "Échec de l'envoi du message. Mailer Error: {$mail->ErrorInfo}";
+        $_SESSION['error'] = "E-mail failed to be sent. Mailer Error: {$mail->ErrorInfo}";
         header('Location: index.php');
     }
 

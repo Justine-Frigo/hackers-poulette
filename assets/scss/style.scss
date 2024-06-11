@@ -47,7 +47,7 @@ body {
         display: block;
         margin-bottom: 34px;
 
-        &::placeholder {
+       & ::placeholder {
           font-size: 15px;
           color: #00ade6;
           position: absolute;
@@ -57,6 +57,11 @@ body {
           cursor: text;
           font-family: "Montserrat", sans-serif;
         }
+
+        .error {
+          color: rgb(235, 85, 85);
+        }
+        
 
         input,
         textarea {
@@ -140,8 +145,4 @@ body {
       }
     }
   }
-}
-
-.error {
-  color: rgb(235, 85, 85);
 }
