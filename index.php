@@ -84,7 +84,7 @@ unset($_SESSION['errors'], $_SESSION['form_data'], $_SESSION['success'], $_SESSI
 
                 <!-- Honeypot field for anti-spam -->
                 <div style="display:none;">
-                    <label for="honeypot">Laissez ce champ vide</label>
+                    <label for="honeypot">Let this field empty</label>
                     <input type="text" id="honeypot" name="honeypot">
                 </div>
 
